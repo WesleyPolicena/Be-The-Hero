@@ -26,7 +26,7 @@ export default function Profile () {
         })
     }, [ongId]);
 
-    async function handleDeleteIncident(id){
+    async function handleDeleteIncident(id) {
         try {
             await api.delete(`incidents/${id}`, {
                 headers: {
@@ -63,7 +63,7 @@ export default function Profile () {
                 {incidents.map(incident => (
                     <li key={incident.id}>
                         <strong>Caso</strong>
-                        <p>{incident.id}</p>
+                        <p>{incident.title}</p>
 
                         <strong>Descrição:</strong>
                         <p>{incident.description}</p>
